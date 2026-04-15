@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annie Kunth | UGC Creator</title>
+    <meta name="description" content="Annie Kunth – UGC Creatorin für authentischen, hochwertigen Content. Buche mich direkt für deine nächste Kampagne.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav__logo">Annie Kunth</div>
+        <button class="nav__toggle" id="navToggle" aria-label="Menü öffnen">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav__links" id="navLinks">
+            <li><a href="#about">Über mich</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact" class="nav__cta">Buche mich</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero__video-bg">
+            <video src="fashion-video-1.mp4" autoplay muted loop playsinline preload="metadata"></video>
+            <video src="drinks-video-1.mp4" autoplay muted loop playsinline preload="metadata"></video>
+            <video src="fashion-video-2.mp4" autoplay muted loop playsinline preload="metadata"></video>
+            <video src="header-video-4.mp4" autoplay muted loop playsinline preload="metadata"></video>
+            <div class="hero__video-overlay"></div>
+        </div>
+        <div class="hero__content">
+            <span class="hero__label">UGC Creatorin</span>
+            <h1 class="hero__title">
+                Content, der<br>
+                <span class="hero__accent">nicht nach</span><br>
+                Werbung aussieht.
+            </h1>
+            <p class="hero__subtitle">
+                Ich erstelle authentischen Content für Marken, die echte Menschen ansprechen wollen – keine polierten Werbevideos.
+            </p>
+            <div class="hero__actions">
+                <a href="#contact" class="btn btn--primary">Projekt anfragen</a>
+                <a href="#portfolio" class="btn btn--ghost btn--ghost-light">Portfolio ansehen</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about__container">
+            <div class="about__intro">
+                <span class="section-label">Über mich</span>
+                <h2 class="section-title">Hey, ich bin Annie.</h2>
+                <p class="about__text">
+                    Digital Creator aus Leidenschaft. Ich liebe es, authentische Inhalte zu erstellen, die sich anfühlen wie ein ehrlicher Tipp von einer Freundin – nicht wie ein Werbespot. Mein Content lebt von echten Momenten, natürlichem Licht und einem Auge fürs Detail.
+                </p>
+                <p class="about__text">
+                    Ob Lifestyle, Fashion oder Beauty – ich bringe dein Produkt in Szenen, die deine Zielgruppe wirklich ansprechen.
+                </p>
+                <div class="about__image-strip">
+                    <img src="drinks/drinks-1.jpg" alt="Lifestyle Content" loading="lazy">
+                    <img src="fashion/fashion-1.jpg" alt="Fashion Content" loading="lazy">
+                    <img src="padel/padel-2.jpg" alt="Sport Content" loading="lazy">
+                </div>
+            </div>
+            <div class="about__stats">
+                <div class="stat-card">
+                    <span class="stat-card__number" data-count="147">0</span>
+                    <span class="stat-card__label">Beiträge</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-card__number" data-count="962">0</span>
+                    <span class="stat-card__label">Follower</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-card__number" data-count="50">0</span>
+                    <span class="stat-card__label">Zufriedene Brands</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="portfolio__header">
+            <span class="section-label">Portfolio</span>
+            <h2 class="section-title">Ausgewählte Arbeiten</h2>
+            <p class="portfolio__desc">Ein Einblick in meinen Content – authentisch, hochwertig und conversion-stark.</p>
+        </div>
+        <div class="portfolio__filter">
+            <button class="chip chip--active" data-filter="all">Alle</button>
+            <button class="chip" data-filter="drinks">Drinks</button>
+            <button class="chip" data-filter="fashion">Fashion</button>
+            <button class="chip" data-filter="padel">Padel</button>
+            <button class="chip" data-filter="bag">Accessoires</button>
+        </div>
+
+        <!-- Project: Drinks -->
+        <div class="portfolio__project" data-project="drinks">
+            <h3 class="portfolio__project-title">Drinks & Lifestyle</h3>
+            <div class="portfolio__project-grid">
+                <div class="portfolio__item portfolio__item--tall" data-category="drinks">
+                    <img src="drinks/drinks-1.jpg" alt="Matcha Lifestyle – Street" loading="lazy">
+                    <div class="portfolio__overlay"><span>Matcha Lifestyle</span></div>
+                </div>
+                <div class="portfolio__item" data-category="drinks">
+                    <img src="drinks/drinks-2.jpg" alt="BIKINI Drinks – Produktshot" loading="lazy">
+                    <div class="portfolio__overlay"><span>Produkt Close-Up</span></div>
+                </div>
+                <div class="portfolio__item" data-category="drinks">
+                    <img src="drinks/drinks-3.jpg" alt="Matcha Lifestyle" loading="lazy">
+                    <div class="portfolio__overlay"><span>Lifestyle Shot</span></div>
+                </div>
+                <div class="portfolio__item" data-category="drinks">
+                    <img src="drinks/drinks-4.jpg" alt="Drink Content" loading="lazy">
+                    <div class="portfolio__overlay"><span>Drink Content</span></div>
+                </div>
+                <div class="portfolio__item" data-category="drinks">
+                    <img src="drinks/drinks-5.jpg" alt="Drink Lifestyle" loading="lazy">
+                    <div class="portfolio__overlay"><span>Drink Lifestyle</span></div>
+                </div>
+                <div class="portfolio__item portfolio__item--video" data-category="drinks">
+                    <video src="drinks-video-1.mp4" muted loop playsinline preload="metadata"></video>
+                    <div class="portfolio__play-icon">▶</div>
+                    <div class="portfolio__overlay"><span>Trinkflasche Reel</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project: Fashion -->
+        <div class="portfolio__project" data-project="fashion">
+            <h3 class="portfolio__project-title">Fashion & Outfit</h3>
+            <div class="portfolio__project-grid">
+                <div class="portfolio__item" data-category="fashion">
+                    <img src="fashion/fashion-1.jpg" alt="Fashion Selfie" loading="lazy">
+                    <div class="portfolio__overlay"><span>Outfit Selfie</span></div>
+                </div>
+                <div class="portfolio__item portfolio__item--tall" data-category="fashion">
+                    <img src="fashion/fashion-2.jpg" alt="Fashion Close-Up" loading="lazy">
+                    <div class="portfolio__overlay"><span>Detail Close-Up</span></div>
+                </div>
+                <div class="portfolio__item" data-category="fashion">
+                    <img src="fashion/fashion-3.jpg" alt="Fashion Content" loading="lazy">
+                    <div class="portfolio__overlay"><span>Fashion Content</span></div>
+                </div>
+                <div class="portfolio__item" data-category="fashion">
+                    <img src="fashion/fashion-4.jpg" alt="Outfit Detail" loading="lazy">
+                    <div class="portfolio__overlay"><span>Outfit Detail</span></div>
+                </div>
+                <div class="portfolio__item" data-category="fashion">
+                    <img src="fashion/fashion-5.jpg" alt="Style Content" loading="lazy">
+                    <div class="portfolio__overlay"><span>Style Content</span></div>
+                </div>
+                <div class="portfolio__item portfolio__item--video" data-category="fashion">
+                    <video src="fashion-video-1.mp4" muted loop playsinline preload="metadata"></video>
+                    <div class="portfolio__play-icon">▶</div>
+                    <div class="portfolio__overlay"><span>Outfit Reel 1</span></div>
+                </div>
+                <div class="portfolio__item portfolio__item--video" data-category="fashion">
+                    <video src="fashion-video-2.mp4" muted loop playsinline preload="metadata"></video>
+                    <div class="portfolio__play-icon">▶</div>
+                    <div class="portfolio__overlay"><span>Outfit Reel 2</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project: Padel -->
+        <div class="portfolio__project" data-project="padel">
+            <h3 class="portfolio__project-title">Sport & Padel</h3>
+            <div class="portfolio__project-grid">
+                <div class="portfolio__item" data-category="padel">
+                    <img src="padel/padel-1.jpg" alt="Padel Equipment" loading="lazy">
+                    <div class="portfolio__overlay"><span>Equipment Shot</span></div>
+                </div>
+                <div class="portfolio__item portfolio__item--tall" data-category="padel">
+                    <img src="padel/padel-2.jpg" alt="Padel Action" loading="lazy">
+                    <div class="portfolio__overlay"><span>Padel Action</span></div>
+                </div>
+                <div class="portfolio__item" data-category="padel">
+                    <img src="padel/padel-3.jpg" alt="Padel Court" loading="lazy">
+                    <div class="portfolio__overlay"><span>Court Scene</span></div>
+                </div>
+                <div class="portfolio__item" data-category="padel">
+                    <img src="padel/padel-4.jpg" alt="Padel Lifestyle" loading="lazy">
+                    <div class="portfolio__overlay"><span>Sport Lifestyle</span></div>
+                </div>
+                <div class="portfolio__item portfolio__item--video" data-category="padel">
+                    <video src="padel/padel-video.mp4" muted loop playsinline preload="metadata"></video>
+                    <div class="portfolio__play-icon">▶</div>
+                    <div class="portfolio__overlay"><span>Padel Reel</span></div>
+                </div>
+                <div class="portfolio__item" data-category="padel">
+                    <video src="padel/padel-video.mp4" muted loop playsinline preload="metadata"></video>
+                    <div class="portfolio__overlay"><span>Padel Video</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project: Bag -->
+        <div class="portfolio__project" data-project="bag">
+            <h3 class="portfolio__project-title">Accessoires & Tasche</h3>
+            <div class="portfolio__project-grid">
+                <div class="portfolio__item portfolio__item--tall" data-category="bag">
+                    <img src="bag/bag-1.jpg" alt="Tasche Lifestyle" loading="lazy">
+                    <div class="portfolio__overlay"><span>Bag Lifestyle</span></div>
+                </div>
+                <div class="portfolio__item" data-category="bag">
+                    <img src="bag/bag-2.jpg" alt="Tasche Präsentation" loading="lazy">
+                    <div class="portfolio__overlay"><span>Bag Presentation</span></div>
+                </div>
+                <div class="portfolio__item" data-category="bag">
+                    <img src="bag/bag-3.jpg" alt="Tasche Detail" loading="lazy">
+                    <div class="portfolio__overlay"><span>Detail Shot</span></div>
+                </div>
+                <div class="portfolio__item" data-category="bag">
+                    <img src="bag/bag-4.jpg" alt="Outfit mit Tasche" loading="lazy">
+                    <div class="portfolio__overlay"><span>Outfit Styling</span></div>
+                </div>
+                <div class="portfolio__item" data-category="bag">
+                    <img src="bag/bag-5.jpg" alt="Tasche Street Style" loading="lazy">
+                    <div class="portfolio__overlay"><span>Street Style</span></div>
+                </div>
+                <div class="portfolio__item" data-category="bag">
+                    <img src="bag/bag-6.jpg" alt="Accessoire Close-Up" loading="lazy">
+                    <div class="portfolio__overlay"><span>Accessoire Detail</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="services__container">
+            <div class="services__header">
+                <span class="section-label">Services</span>
+                <h2 class="section-title">Authentischer Content, der verkauft –<br>das erstelle ich für dich</h2>
+            </div>
+            <div class="services__grid">
+                <div class="service-card">
+                    <div class="service-card__image">
+                        <img src="drinks/drinks-2.jpg" alt="UGC Video Content" loading="lazy">
+                    </div>
+                    <span class="service-card__icon">📱</span>
+                    <h3 class="service-card__title">UGC Videos</h3>
+                    <p class="service-card__text">Kurze, echte Videos, die wie von echten Kunden wirken – perfekt für Ads, Reels und TikTok. Sie bauen Vertrauen auf und steigern deine Conversion Rate spürbar.</p>
+                    <ul class="service-card__list">
+                        <li>Produkt-Unboxings & Hands-On</li>
+                        <li>Get Ready With Me & Day-in-the-Life</li>
+                        <li>Testimonial-Style & Storytelling</li>
+                        <li>Reels & TikTok-fähig (15–60 Sek.)</li>
+                    </ul>
+                    <a href="#contact" class="btn btn--primary btn--card">Jetzt UGC Video anfragen</a>
+                </div>
+                <div class="service-card service-card--featured">
+                    <span class="service-card__badge">Beliebt</span>
+                    <div class="service-card__image">
+                        <img src="bag/bag-2.jpg" alt="Foto Content" loading="lazy">
+                    </div>
+                    <span class="service-card__icon">📸</span>
+                    <h3 class="service-card__title">Foto Content</h3>
+                    <p class="service-card__text">Professionelle, aber natürliche Lifestyle-Fotos, die deine Produkte emotional und ansprechend zeigen – ideal für Websites, Shops und Werbeanzeigen.</p>
+                    <ul class="service-card__list">
+                        <li>Hochwertige Produkt Flat Lays</li>
+                        <li>Authentische Lifestyle-Shots</li>
+                        <li>Before & After Aufnahmen</li>
+                        <li>Kampagnen-fähige Bildserien</li>
+                    </ul>
+                    <a href="#contact" class="btn btn--primary btn--card">Foto-Shooting buchen</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__image">
+                        <img src="padel/padel-2.jpg" alt="Content Pakete" loading="lazy">
+                    </div>
+                    <span class="service-card__icon">🎬</span>
+                    <h3 class="service-card__title">Content Pakete</h3>
+                    <p class="service-card__text">Alles aus einer Hand – komplette Pakete aus Videos + Fotos für deine nächste Kampagne. Du sparst Zeit und bekommst sofort einsatzbereiten Content mit Nutzungsrechten.</p>
+                    <ul class="service-card__list">
+                        <li>Kampagnen-Bundles (z. B. 10 Videos + 20 Fotos)</li>
+                        <li>Monatliche Content-Retainer</li>
+                        <li>Exklusive & erweiterte Nutzungsrechte</li>
+                    </ul>
+                    <a href="#contact" class="btn btn--primary btn--card">Komplettpaket anfragen</a>
+                </div>
+            </div>
+            <div class="services__cta">
+                <p class="services__cta-text">Bereit für Content, der wirklich konvertiert?</p>
+                <a href="#contact" class="btn btn--primary btn--lg">Dein individuelles Angebot in 24h</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="process__container">
+            <div class="process__header">
+                <span class="section-label">So läuft’s ab</span>
+                <h2 class="section-title">In 4 Schritten zum<br>fertigen Content</h2>
+            </div>
+            <div class="process__steps">
+                <div class="process__step">
+                    <div class="process__step-inner">
+                        <span class="process__icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        </span>
+                        <div class="process__step-body">
+                            <h3 class="process__step-title">Anfrage</h3>
+                            <p class="process__step-text">Du schickst mir eine kurze Anfrage über das Formular oder per E-Mail.</p>
+                        </div>
+                    </div>
+                    <div class="process__connector" aria-hidden="true"></div>
+                </div>
+                <div class="process__step">
+                    <div class="process__step-inner">
+                        <span class="process__icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                        </span>
+                        <div class="process__step-body">
+                            <h3 class="process__step-title">Briefing</h3>
+                            <p class="process__step-text">Wir besprechen dein Produkt, die Zielgruppe und den gewünschten Stil.</p>
+                        </div>
+                    </div>
+                    <div class="process__connector" aria-hidden="true"></div>
+                </div>
+                <div class="process__step">
+                    <div class="process__step-inner">
+                        <span class="process__icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+                        </span>
+                        <div class="process__step-body">
+                            <h3 class="process__step-title">Produktion</h3>
+                            <p class="process__step-text">Ich erstelle den Content – authentisch, hochwertig und on-brand.</p>
+                        </div>
+                    </div>
+                    <div class="process__connector" aria-hidden="true"></div>
+                </div>
+                <div class="process__step">
+                    <div class="process__step-inner">
+                        <span class="process__icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </span>
+                        <div class="process__step-body">
+                            <h3 class="process__step-title">Lieferung</h3>
+                            <p class="process__step-text">Du erhältst den fertigen Content inkl. Nutzungsrechte – ready to post.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact__container">
+            <div class="contact__info">
+                <span class="section-label">Kontakt</span>
+                <h2 class="section-title">Lass uns zusammen<br>arbeiten.</h2>
+                <p class="contact__text">
+                    Du hast ein Produkt, das echten Content verdient? Schreib mir – ich melde mich innerhalb von 24 Stunden.
+                </p>
+                <div class="contact__details">
+                    <a href="mailto:akunath.ugc@gmail.com" class="contact__link">
+                        <span class="contact__link-icon">✉</span>
+                        akunath.ugc@gmail.com
+                    </a>
+                    <a href="https://instagram.com/anniie_kunth" target="_blank" rel="noopener noreferrer" class="contact__link">
+                        <span class="contact__link-icon">◎</span>
+                        @anniie_kunth
+                    </a>
+                </div>
+            </div>
+            <form class="contact__form" id="contactForm" novalidate>
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Dein Name" required autocomplete="name">
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Deine E-Mail" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="brand" name="brand" placeholder="Marke / Unternehmen" autocomplete="organization">
+                </div>
+                <div class="form-group">
+                    <select id="service" name="service" required>
+                        <option value="" disabled selected>Welchen Service brauchst du?</option>
+                        <option value="ugc-video">UGC Videos</option>
+                        <option value="foto-content">Foto Content</option>
+                        <option value="content-paket">Content Paket</option>
+                        <option value="sonstiges">Sonstiges</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="4" placeholder="Erzähl mir kurz von deinem Projekt…" required></textarea>
+                </div>
+                <button type="submit" class="btn btn--primary btn--full">Anfrage senden</button>
+                <p class="form-success" id="formSuccess">Danke für deine Anfrage! Ich melde mich bald.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__brand">
+                <span class="footer__logo">Annie Kunth</span>
+                <p class="footer__tagline">UGC Creatorin für authentischen Content</p>
+            </div>
+            <div class="footer__links">
+                <a href="#hero">Start</a>
+                <a href="#about">Über mich</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Kontakt</a>
+            </div>
+            <div class="footer__social">
+                <a href="https://instagram.com/anniie_kunth" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+                <a href="https://tiktok.com/@anniie_kunth" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TikTok</a>
+                <a href="mailto:akunath.ugc@gmail.com" aria-label="E-Mail">E-Mail</a>
+            </div>
+            <p class="footer__copy">&copy; 2026 Annie Kunth. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

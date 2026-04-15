@@ -1,0 +1,34 @@
+Whitepaper: Website für UGC Creator
+Version 1.0 – Grundlage für Design & Umsetzung Zielgruppe: UGC Creator, die professionell und direkt von Marken gebucht werden wollen
+1. Was bedeutet „UGC Creator“?
+UGC steht für User-Generated Content (nutzergenerierte Inhalte).
+Ein UGC Creator ist ein Freelance-Content-Creator, der authentische Inhalte für Marken erstellt – meist kurze Videos, Reels, Fotos, Unboxings, Produkt-Tests oder „Alltagsnutzung“-Szenen.
+Der entscheidende Unterschied zu klassischen Influencern:
+Influencer zeigen ihr eigenes Leben und bauen eine große eigene Follower-Base auf. Die Marke nutzt deren Reichweite und Vertrauen.
+UGC Creator erstellen Inhalte, die bewusst wie von einem normalen Kunden wirken („Hey, das hab ich gerade ausprobiert“-Vibe). Die Marke kauft die Rechte und setzt den Content in Werbeanzeigen, auf der eigenen Website oder in Social-Media-Kampagnen ein.
+Marken lieben UGC, weil diese Inhalte deutlich glaubwürdiger und wirksamer sind als polierte Werbevideos. Studien zeigen immer wieder: Nutzergenerierte Inhalte beeinflussen die Kaufentscheidung stärker als klassische Werbung.
+Kurz gesagt: Du bist ein bezahlter Freelance-Content-Creator, dessen Job es ist, dass der Content nicht wie Werbung aussieht. Dafür brauchst du keine 10.000 oder mehr eigene Follower.
+2. Warum ist eine eigene Website für dich als UGC Creator sehr wichtig?
+Für den reinen Einstieg reichen oft Instagram, TikTok und UGC-Plattformen aus, um erste Jobs zu bekommen.
+Sobald du jedoch ernsthaft Geld verdienen und skalieren willst, wird eine eigene Website zum Game-Changer – für viele erfahrene UGC Creator sogar zur Pflicht.
+Die wichtigsten Vorteile einer eigenen Website:
+Du wirkst sofort professioneller und seriöser. Marken können dich schneller und gründlicher prüfen.
+Du hast volle Kontrolle über dein Portfolio, deine Preise, deine Geschichte und deine Positionierung. Plattformen können dich shadowbannen oder die Regeln ändern – deine Website nicht.
+Du ermöglichst direkte Buchungen ohne Umweg über eine Plattform, die 20–30 % Provision kassiert.
+Du baust dir eine eigene Marke auf und kannst langfristig höhere Preise verlangen.
+Die Website wird dein zentraler Hub: Portfolio + Media Kit + Preise + Kontaktmöglichkeiten – alles an einem Ort.
+Fazit aus Punkt 1 & 2: Ohne eigene Website bleibst du „nur“ ein Creator auf fremden Plattformen. Mit einer eigenen, gut gemachten Website wirst du zum echten Freelancer/Business und kannst Marken direkt ansprechen.
+3. Ziel der Website (Zielsetzung & gewünschter Effekt)
+Primäres Ziel der Website: Marken (Brands, Agenturen, eCommerce-Shops) sollen dich schnell verstehen, dir vertrauen und dich direkt buchen können.
+Sekundäre Ziele:
+Professionalität und Seriosität vermitteln
+Deine Expertise als UGC Creator klar positionieren
+Dein Portfolio als stärkstes Argument in den Vordergrund stellen
+Den Buchungsprozess so einfach wie möglich machen (wenige Klicks bis zur Anfrage)
+Stil- und Designrichtung (Vorgabe für Stitch & Claude):
+Clean, modern und minimalistisch
+Authentisch – genau wie dein UGC-Content (nicht überpoliert)
+Mobil-optimiert (Mobile-First, da die meisten Besucher per Smartphone kommen)
+Viel Weißraum, klare Typografie (Sans-Serif), hochwertige Video- und Foto-Elemente
+Farbgebung: Neutrale Basis + dezente Akzente, die zu deiner persönlichen Nische passen
+Empfohlener Website-Typ: One-Page-Landingpage – übersichtlich, schnell ladend und hoch konversionsstark. Alles Wichtige ist auf einer Seite erreichbar, ohne dass der Besucher navigieren muss.
