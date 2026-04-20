@@ -549,6 +549,102 @@ ul {
     opacity: 0;
 }
 
+/* --- Media-KIT Section --- */
+.mediakit {
+    position: relative;
+    padding: var(--space-xl) var(--space-lg);
+    text-align: center;
+    overflow: hidden;
+}
+
+.mediakit__bg {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    z-index: 0;
+}
+
+.mediakit__bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.45) saturate(0.8);
+}
+
+.mediakit::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(166, 100, 111, 0.45) 0%, rgba(122, 94, 128, 0.45) 100%);
+    z-index: 1;
+}
+
+.mediakit__container {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.mediakit__title {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+    margin: 0;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+.mediakit__desc {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.88);
+    margin: 0;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.25);
+}
+
+.btn--mediakit {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: var(--space-sm);
+    padding: 1rem 2.4rem;
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--on-primary);
+    background-color: var(--primary);
+    border: none;
+    border-radius: 3rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 20px rgba(166, 100, 111, 0.35);
+}
+
+.btn--mediakit svg {
+    width: 1.3rem;
+    height: 1.3rem;
+    flex-shrink: 0;
+}
+
+.btn--mediakit:hover {
+    background-color: var(--primary-dim);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(166, 100, 111, 0.45);
+}
+
+.btn--mediakit:active {
+    transform: translateY(0);
+}
+
 /* --- Services Section --- */
 .services {
     background-color: var(--surface-container-lowest);
