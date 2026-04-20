@@ -879,6 +879,35 @@ ul {
     display: none;
 }
 
+/* Step color variants */
+.process__step--1 .process__step-inner {
+    background: rgba(166, 100, 111, 0.18);
+    border-radius: 1rem;
+    padding: var(--space-md);
+    border-left: 3px solid rgba(166, 100, 111, 0.7);
+}
+
+.process__step--2 .process__step-inner {
+    background: rgba(122, 94, 128, 0.18);
+    border-radius: 1rem;
+    padding: var(--space-md);
+    border-left: 3px solid rgba(122, 94, 128, 0.7);
+}
+
+.process__step--3 .process__step-inner {
+    background: rgba(138, 114, 104, 0.18);
+    border-radius: 1rem;
+    padding: var(--space-md);
+    border-left: 3px solid rgba(138, 114, 104, 0.7);
+}
+
+.process__step--4 .process__step-inner {
+    background: rgba(166, 100, 111, 0.10);
+    border-radius: 1rem;
+    padding: var(--space-md);
+    border-left: 3px solid rgba(212, 163, 171, 0.7);
+}
+
 
 
 
