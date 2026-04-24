@@ -1,8 +1,8 @@
 # Workpaper – Landing Page „Annie Kunth | UGC Creator"
 
 **Erstellt:** 15. April 2026  
-**Zuletzt aktualisiert:** 15. April 2026  
-**Status:** v1.5 – Iterative Überarbeitungen abgeschlossen  
+**Zuletzt aktualisiert:** 24. April 2026  
+**Status:** v1.6 – SEO-Optimierung & rechtliche Seiten ergänzt  
 
 ---
 
@@ -21,6 +21,10 @@ Eine One-Page-Landingpage für Annie Kunth (@anniie_kunth), UGC Creatorin im Ber
 | `index.html` | Gesamte Seitenstruktur mit allen Sektionen |
 | `styles.css` | Komplettes Styling nach Design System „The Editorial Artisan" |
 | `script.js` | Interaktivität: Navigation, Animationen, Filter, Formular |
+| `impressum.html` | Impressum mit Platzhaltern (§ 5 TMG) |
+| `datenschutz.html` | Datenschutzerklärung mit Platzhaltern (DSGVO) |
+| `robots.txt` | Crawler-Steuerung; Impressum/Datenschutz ausgeschlossen |
+| `sitemap.xml` | XML-Sitemap für Google-Indexierung |
 
 ---
 
@@ -108,6 +112,22 @@ Alle Mediendateien wurden von kryptischen Instagram-IDs in kurze, projektbezogen
 
 ### 3.8 Footer
 - Logo, Navigation, Social Links, Copyright
+- Impressum- und Datenschutz-Links im Copyright-Bereich ergänzt
+
+---
+
+## 3.9 Rechtliche Seiten
+
+### impressum.html
+- Eigenes Layout mit `legal-page`-Klasse, nutzt bestehendes Design-System (Fonts, CSS-Variablen)
+- Navigation mit Links zurück zu `index.html`
+- Platzhalter-Felder für: Name, Adresse, USt-ID, Verantwortlicher
+- Impressum/Datenschutz von `robots.txt` mit `Disallow` ausgeschlossen (kein SEO-Wert)
+
+### datenschutz.html
+- Gleiche Struktur wie Impressum
+- Abgedeckte Themen: Hosting, Kontaktformular, Google Fonts, externe Links (Instagram/TikTok), Analytics, Betroffenenrechte (Art. 15–21 DSGVO)
+- Platzhalter für: Hosting-Anbieter, Formular-Dienst, Analytics-Tool, Datum
 
 ---
 
@@ -124,6 +144,26 @@ Alle Mediendateien wurden von kryptischen Instagram-IDs in kurze, projektbezogen
 | **Ghost Borders** | outline-variant @ 20% Opacity für Input-Felder |
 | **No Drop Shadows** | Keine Standard-Schatten; nur subtile Box-Shadows auf Primary-CTAs |
 | **Kein reines Schwarz** | Text in #2c2325 (on-surface) statt #000000 |
+
+---
+
+## 4.1 SEO-Umsetzung
+
+| Maßnahme | Datei | Details |
+| :--- | :--- | :--- |
+| **Title-Tag** | `index.html` | Keywords: UGC Creator, Lifestyle, Fashion, Beauty, Marken |
+| **Meta Description** | `index.html` | Conversion-orientiert, 24h-Response als USP |
+| **Meta Keywords** | `index.html` | 10 relevante Keywords (DE) |
+| **Canonical-Tag** | `index.html` | `https://www.annie-kunth.de/` (Platzhalter) |
+| **Open Graph** | `index.html` | og:title, og:description, og:image (1200×630), og:locale de_DE |
+| **Twitter Card** | `index.html` | summary_large_image, @anniie_kunth |
+| **JSON-LD Schema** | `index.html` | `Person`-Typ mit jobTitle, sameAs (IG/TT), offers, knowsAbout |
+| **Alt-Texte** | `index.html` | About-Strip + alle 3 Service-Karten-Bilder verbessert |
+| **robots.txt** | `robots.txt` | `Allow: /`, Impressum/Datenschutz `Disallow`, Sitemap-Verweis |
+| **sitemap.xml** | `sitemap.xml` | One-Page; priority 1.0, changefreq monthly |
+| **Favicon-Links** | `index.html` | `favicon.png` + `apple-touch-icon.png` (Dateien noch erstellen) |
+
+> **Hinweis:** Alle URLs mit `https://www.annie-kunth.de` sind Platzhalter und müssen vor Go-Live durch die echte Domain ersetzt werden.
 
 ---
 
@@ -161,16 +201,21 @@ Alle Mediendateien wurden von kryptischen Instagram-IDs in kurze, projektbezogen
 | **v1.3** | 15.04.2026 | Hero komplett neu: 4 MP4-Videos als Hintergrund, Overlay, 0.65× Wiedergabegeschwindigkeit |
 | **v1.4** | 15.04.2026 | Prozess-Section: SVG-Icons statt Zahlen, kompaktes Padding, Trennlinie entfernt |
 | **v1.5** | 15.04.2026 | `bag-video.mp4` → `padel/padel-video.mp4` korrekt zugeordnet; Bag-Section ohne Video |
+| **v1.6** | 24.04.2026 | SEO-Optimierung: erweiterter `<head>` (OG, Twitter Card, JSON-LD, Canonical), Alt-Texte verbessert, Footer-Links; `impressum.html`, `datenschutz.html`, `robots.txt`, `sitemap.xml` erstellt |
 
 ---
 
 ## 8. Offene Punkte / Nächste Schritte
 
+- [ ] **Domain einsetzen:** Alle `https://www.annie-kunth.de`-Platzhalter in `index.html`, `robots.txt`, `sitemap.xml` durch echte Domain ersetzen
+- [ ] **Impressum ausfüllen:** `impressum.html` – Name, Adresse, USt-ID eintragen
+- [ ] **Datenschutz ausfüllen:** `datenschutz.html` – Hosting-Anbieter, Formular-Dienst, Analytics-Tool, Datum eintragen
+- [ ] **Favicon erstellen:** `favicon.png` (32×32 px) und `apple-touch-icon.png` (180×180 px) anlegen
+- [ ] **OG-Bild optimieren:** `annie-hero.jpg` in 1200×630 px Crop für Social Sharing
+- [ ] **Google Fonts lokal hosten:** Für bessere DSGVO-Konformität und LCP-Performance
 - [ ] **Portfolio-Inhalte:** Weitere Projekte und Videos hinzufügen, sobald verfügbar
 - [ ] **Video-Thumbnails:** Custom Poster-Frames für Videos erstellen (derzeit erstes Frame aus Metadaten)
-- [ ] **Backend-Integration:** Kontaktformular an ein Backend oder E-Mail-Service anbinden (z. B. Formspree, Netlify Forms)
-- [ ] **Favicon & OG-Tags:** Meta-Bilder und Favicon für Social Sharing hinzufügen
-- [ ] **Performance:** Bilder optimieren (WebP), Fonts lokal hosten für bessere LCP-Werte
-- [ ] **Analytics:** Tracking einrichten (z. B. Google Analytics, Plausible)
-- [ ] **Rechtliches:** Impressum und Datenschutzerklärung ergänzen (rechtlich erforderlich in DE)
+- [ ] **Backend-Integration:** Kontaktformular an E-Mail-Service anbinden (z. B. Formspree, Netlify Forms)
+- [ ] **Performance:** Bilder in WebP konvertieren
+- [ ] **Analytics:** Tracking einrichten (z. B. Plausible – DSGVO-freundlich, kein Cookie-Banner nötig)
 - [ ] **Profilbild:** Separates, freigestelltes Hero-Bild erstellen (aktuell wird Instagram-Screenshot verwendet)

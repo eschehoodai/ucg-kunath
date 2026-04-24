@@ -100,6 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Portfolio Filter (Project-based) ---
     const filterButtons = document.querySelectorAll('.chip[data-filter]');
     const portfolioProjects = document.querySelectorAll('.portfolio__project[data-project]');
+    const portfolioSection = document.querySelector('.portfolio');
 
     filterButtons.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -115,6 +116,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     project.classList.add('hidden');
                 }
             });
+
+            // Hide project titles when a specific filter is active (redundant when only one group visible)
+            if (filter === 'all') {
+                portfolioSection.classList.remove('portfolio--filtered');
+            } else {
+                portfolioSection.classList.add('portfolio--filtered');
+            }
         });
     });
 
