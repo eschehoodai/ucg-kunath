@@ -8,24 +8,29 @@ We achieve this through **Intentional Asymmetry** and **Harmonious Negative Spac
 
 ---
 
-## 2. Colors & Surface Philosophy
-The palette is rooted in a "Muted Earthy" foundation to ensure the creator's content remains the hero, punctuated by dusty rose and sophisticated plum accents.
+## 2. Colors & Surface Philosophy (Updated)
+Die neue Palette nutzt Beige als Leinwand, wodurch die Beerentöne wie kostbare Farbtupfer wirken.
+
+### Die neue "Clean Beige" Palette
+*   **Base Layer:** `surface` (#F5F2ED) – Ein helles, warmes Leinen-Beige. Ersetzt das dunklere Graubraun.
+*   **Sectional Depth:** `surface-container-low` (#EFEBE5) – Ein minimal dunkleres Beige für subtile Zonen.
+*   **Hero/Focus:** `surface-container-lowest` (#FFFFFF) – Reinweiß für Karten oder Sektionen, die „strahlen" sollen.
+*   **The "Berry" Pop (Primary):** `primary` – #8E44AD (Deep Plum) oder #A6646F (Dusty Rose).
 
 ### The "No-Line" Rule
-**Prohibit 1px solid borders for sectioning.** 
-Structural separation is achieved exclusively through background shifts. Use `surface` as your base and `surface-container-low` for large content blocks. This creates a "soft-edge" layout that feels organic and fluid.
+**Prohibit 1px solid borders for sectioning.**
+Strukturelle Trennung erfolgt ausschließlich durch Hintergrundwechsel. `surface` als Basis, `surface-container-low` für große Inhaltsbereiche.
 
-### Surface Hierarchy & Nesting
-Treat the UI as a series of stacked, fine papers. 
-*   **Base Layer:** `surface` (#807475)
-*   **Sectional Depth:** `surface-container-low` for subtle differentiation.
-*   **Hero/Focus Areas:** `surface-container-lowest` to provide "pop" and clarity.
-*   **Interactive Elements:** `primary-container` for sophisticated Dusty Rose highlights.
+### Überarbeitete Surface Hierarchy
+Anstatt dunkler Flächen nutzen wir Ton-in-Ton Layering in hellen Nuancen:
+*   **Background:** `surface` (#F5F2ED)
+*   **Karten/Module:** `surface-container-lowest` (#FFFFFF)
+*   **Akzente:** `primary` (Beerenfarbe) nur für strategische Highlights (Links, Icons, aktive States).
 
 ### The "Glass & Gradient" Rule
-To avoid a flat, "Bootstrap" feel, floating elements (like mobile navigation bars or sticky headers) must utilize **Glassmorphism**. 
-*   **Formula:** `surface` color at 70% opacity + `backdrop-filter: blur(20px)`.
-*   **Signature Textures:** For primary CTAs, use a subtle linear gradient from `primary` (#a6646f) to `primary-dim` to add "soul" and weight.
+Schwebende Elemente (Navigation, Sticky Header) nutzen weiterhin **Glassmorphism**.
+*   **Formula:** `surface` (#F5F2ED) bei 70% Opacity + `backdrop-filter: blur(20px)`.
+*   **Signature Textures:** Für primäre CTAs ein subtiler Gradient von `primary` zur gedämpften Variante.
 
 ---
 
@@ -46,57 +51,62 @@ We use a dual-sans-serif approach to balance modern professionalism with approac
 
 ---
 
-## 4. Elevation & Depth: Tonal Layering
-Traditional shadows are often too "digital." This system uses **Tonal Layering** to convey hierarchy.
+## 4. Elevation & Depth (Updated)
+Da wir nun auf hellem Grund arbeiten, wird das Prinzip der **Soft Shadows** noch wichtiger, um Tiefe ohne visuelle Härte zu erzeugen.
 
-*   **The Layering Principle:** Instead of a shadow, place a `surface-container-lowest` card on a `surface-container` background. The slight shift in hex value provides a sophisticated, "quiet" lift.
-*   **Ambient Shadows:** Use only for high-priority floating elements (e.g., a "Book Now" FAB). 
-    *   *Shadow:* Uses the `on-surface` color at a very low opacity for a natural, ambient light effect.
-*   **The "Ghost Border" Fallback:** If a border is required for accessibility on inputs, use `outline-variant` at **20% opacity**. Never use 100% black or high-contrast lines.
+*   **Tonal Layering:** Eine weiße Karte (#FFFFFF) auf beigem Grund (#F5F2ED) braucht fast keinen Schatten. Der Kontrast zwischen beiden Tönen ist der Inbegriff von „Clean Design".
+*   **Shadow-Substitute:** Statt Schatten ein hauchdünner Border in `outline-variant` mit nur **10% Opacity**, wenn ein Element wirklich abgegrenzt werden muss.
+*   **Ambient Shadows:** Nur für hochpriorisierte schwebende Elemente. Schatten nutzt `on-surface` bei sehr geringer Opacity für einen natürlichen Ambient-Licht-Effekt.
+*   **The "Ghost Border" Fallback:** Für Inputs `outline-variant` bei **20% Opacity**. Niemals reines Schwarz oder hochkontrastige Linien.
 
 ---
 
-## 5. Components
+## 5. Components (Visual Update)
 
 ### Cards (The "Content Block")
-*   **Structure:** No borders. `surface-container-low` background. 
-*   **Rounding:** Subtle roundedness (Index 1) for a modern, slightly softened edge.
-*   **Layout:** Use asymmetrical padding to mirror editorial layouts.
+*   **Hintergrund:** Weiß (#FFFFFF) – schwebt auf dem beigen Untergrund. Wirkt luftig und modern.
+*   **Corner Radius:** Bleibt subtil (Index 1).
+*   **Structure:** Keine Borders. Asymmetrisches Padding für den Editorial-Look.
 
-### Buttons
-*   **Primary:** Background `primary` (#a6646f), Text `on-primary`. Shape: `full`.
-*   **Secondary:** Background `secondary-container`, Text `on-secondary-container`. 
-*   **Tertiary (Ghost):** No background. Text `primary`. Use for low-priority actions like "View More."
+### Buttons (The "Jewelry" Effect)
+Hier lassen wir die Beere glänzen:
+*   **Primary:** Hintergrund in der Beerenfarbe (`primary`). Text in hellem Beige oder Weiß (`on-primary`). Shape: `full`.
+*   **Secondary:** Outline-Button in der Beerenfarbe (0.5px Stärke) auf beigem Grund.
+*   **Tertiary (Ghost):** Nur Text in Beere, ohne Hintergrund. Für Aktionen wie „Mehr ansehen".
 
 ### Input Fields
-*   **Style:** Minimalist. `surface-container-lowest` background with a `Ghost Border` (outline-variant @ 20%).
-*   **States:** On focus, transition border to `primary` (#a6646f) at 100% opacity.
+*   **Style:** Minimalistisch. `surface-container-lowest` (#FFFFFF) Hintergrund mit Ghost Border (`outline-variant` @ 20%).
+*   **States:** Bei Fokus Border-Übergang zu `primary` bei 100% Opacity.
 
-### Chips (Category Tags)
-*   Used for "Niches" (e.g., Beauty, Tech). 
-*   **Style:** `surface-container-high` background with `label-md` text. No border. Shape: subtle roundedness.
+### Chips (Nischen-Tags)
+*   Hintergrund: `surface-container-high` (dunkleres Beige).
+*   Schrift: in der Beerenfarbe (`primary`). Kein Border. Subtile Rundung.
+*   Wirkt extrem „editorial".
 
 ### The "UGC Reel" Component
-*   A custom component for displaying short-form video.
-*   **Visuals:** Staggered vertical heights (Masonry style). No dividers. Use `NORMAL` spacing (Index 2) between videos to keep the layout structured yet fluid.
+*   **Visuals:** Gestaffelte vertikale Höhen (Masonry-Stil). Keine Divider. `NORMAL` Spacing (Index 2) zwischen Videos.
 
 ---
 
-## 6. Do’s and Don’ts
+## 6. Do's and Don'ts (Refined)
 
 ### Do:
-*   **Do** use balanced white space. Maintain clear separation between blocks to ensure readability.
-*   **Do** overlap elements. Let an image "bleed" into the next background color section to break the grid.
-*   **Do** use `primary-fixed-dim` for subtle hover states on interactive elements.
-*   **Do** prioritize mobile-first verticality; stack content with consistent spacing.
+*   **Do** nutze Weißraum großzügig. Beige braucht Platz zum Atmen.
+*   **Do** setze die Beerenfarbe als „Leitsystem" ein – das Auge des Nutzers soll der Farbe folgen.
+*   **Do** lass Bilder in die nächste Hintergrundsektion „bluten", um das Grid aufzubrechen.
+*   **Do** verwende (optional) Serif-Schriften für Zitate oder Headlines, um den „Vogue"-Charakter zu verstärken.
+*   **Do** nutze `primary-fixed-dim` für subtile Hover-States auf interaktiven Elementen.
 
-### Don’t:
-*   **Don’t** use 1px solid black borders. This instantly kills the premium editorial feel.
-*   **Don’t** use standard "drop shadows" (e.g., `0 2px 4px`). They are too heavy for this aesthetic.
-*   **Don’t** use pure black (#000000) for text. Use `on-surface` for a softer, more sophisticated look.
-*   **Don’t** use dividers or horizontal rules. Use vertical space to separate thoughts.
+### Don't:
+*   **Don't** nutze zu viele verschiedene Beerentöne. Bleib bei einer Hauptnuance (z.B. gedecktes Brombeere), um den „Clean"-Faktor nicht zu gefährden.
+*   **Don't** kombiniere das Beige mit hartem Schwarz. Nutze stattdessen ein sehr dunkles Anthrazit oder tiefes Umbra für Text.
+*   **Don't** nutze 1px solid Borders zur Strukturierung. Das zerstört sofort das Premium-Editorial-Gefühl.
+*   **Don't** nutze Standard-Drop-Shadows (z.B. `0 2px 4px`). Zu schwer für diese Ästhetik.
+*   **Don't** nutze Divider oder horizontale Linien. Nutze vertikalen Raum zur Trennung.
 
 ---
 
-## 7. Designer Note: The "Unpolished" Polish
-While the system is minimalist, it should never feel "empty." Use the Dusty Rose (`primary`), Muted Brown (`secondary`), and Plum (`tertiary`) tokens sparingly—like jewelry on a neutral outfit. Use them for small accents: a category tag, a button, or a highlighted word in a headline. This creates a sense of "intentional curation" that builds trust with potential brands.
+## 7. Designer Note: Der neue Look
+*„Stell dir das Design wie ein hochwertiges Interior-Magazin vor: Die Wände sind beige, die Möbel schlicht und hell, aber auf dem Tisch steht eine Vase mit tiefroten Beeren oder ein einzelnes Samtkissen in Pflaume. Dieser punktuelle Einsatz von Farbe auf einer neutralen Basis ist das Geheimnis für den 'Editorial Artisan' Look."*
+
+Die Beerenfarbe (`primary`), das Muted Brown (`secondary`) und Plum (`tertiary`) werden sparsam eingesetzt – wie Schmuck auf einem neutralen Outfit. Kleine Akzente: ein Kategorie-Tag, ein Button, ein hervorgehobenes Wort in der Headline. Das schafft das Gefühl intentionaler Kuration und baut Vertrauen bei potenziellen Marken auf.

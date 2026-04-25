@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Hero Video Playback Speed ---
     document.querySelectorAll('.hero__video-bg video').forEach(video => {
-        video.playbackRate = 0.65;
+        video.playbackRate = 0.6;
     });
 
     // --- Mobile Navigation ---
