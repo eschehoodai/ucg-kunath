@@ -36,9 +36,6 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 
     <!-- JSON-LD Structured Data -->
@@ -72,38 +69,34 @@
 
     <!-- Navigation -->
     <nav class="nav" id="nav">
-        <div class="nav__logo">UGC Creatorin – Annie Kunth</div>
+        <div class="nav__logo">
+            <span class="nav__logo-name">Annie Kunath</span>
+            <span class="nav__logo-sub">UGC Creatorin</span>
+        </div>
         <button class="nav__toggle" id="navToggle" aria-label="Menü öffnen">
             <span></span>
             <span></span>
             <span></span>
         </button>
         <ul class="nav__links" id="navLinks">
-            <li><a href="#about">Über mich</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact" class="nav__cta">Buche mich</a></li>
+            <li><a href="#about">ABOUT ME</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#contact" class="nav__cta">CONTACT</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero__video-bg">
-            <video src="header.mp4" autoplay muted loop playsinline preload="metadata"></video>
+            <img src="titelseite.jpg" alt="Annie Kunth UGC Creatorin">
             <div class="hero__video-overlay"></div>
         </div>
         <div class="hero__content">
-            <span class="hero__label">UGC Creatorin</span>
-            <h1 class="hero__title">
-                Deine Brand<br>
-                mein Content<br>
-                <span class="hero__accent">Echte Erlebnisse.</span>
-            </h1>
-            <p class="hero__subtitle">
-                UGC, der sich<br>
-                <strong>NICHT</strong><br>
-                nach Werbung anfühlt.
-            </p>
+            <div class="hero__text-group">
+                <h1 class="hero__title">Annie Kunath</h1>
+                <p class="hero__subtitle">UGC Creatorin</p>
+            </div>
             <div class="hero__actions">
                 <a href="#contact" class="btn btn--primary">Projekt anfragen</a>
                 <a href="#portfolio" class="btn btn--ghost btn--ghost-light">Portfolio ansehen</a>
@@ -115,7 +108,7 @@
     <section class="about" id="about">
         <div class="about__container">
             <div class="about__intro">
-                <span class="section-label">Über mich</span>
+                <span class="section-label">About Me</span>
                 <h2 class="section-title">Hey, ich bin Annie.</h2>
                 <p class="about__text">
                     Ich bin eine 22-jährige Studentin der Wohnungs- und Immobilienwirtschaft, die die Welt der Zahlen und Strukturen mit einer tiefen Leidenschaft für Ästhetik verbindet. Mein Alltag? Definitiv matcha-fueled und geprägt von meiner Pilates-Obsession – immer in Bewegung und getreu dem Motto: always camera ready.
@@ -413,7 +406,7 @@
     <section class="contact" id="contact">
         <div class="contact__container">
             <div class="contact__info">
-                <span class="section-label">Kontakt</span>
+                <span class="section-label">Contact</span>
                 <h2 class="section-title">Lass uns zusammen<br>arbeiten.</h2>
                 <p class="contact__text">
                     Du hast ein Produkt, das echten Content verdient? Schreib mir – ich melde mich innerhalb von 24 Stunden.
