@@ -5,11 +5,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- Hero Video Playback Speed ---
-    document.querySelectorAll('.hero__video-bg video').forEach(video => {
-        video.playbackRate = 0.6;
-    });
-
     // --- Mobile Navigation ---
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
@@ -43,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Scroll Animations (Intersection Observer) ---
     const fadeElements = document.querySelectorAll(
-        '.about__intro, .about__stats, .stat-card, .portfolio__header, .portfolio__project, ' +
+        '.about__content, .portfolio__header, .portfolio__category, ' +
         '.service-card, .services__header, .process__step, .contact__info, .contact__form'
     );
 
@@ -97,32 +92,26 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(update);
     }
 
-    // --- Portfolio Filter (Project-based) ---
-    const filterButtons = document.querySelectorAll('.chip[data-filter]');
-    const portfolioProjects = document.querySelectorAll('.portfolio__project[data-project]');
-    const portfolioSection = document.querySelector('.portfolio');
+    // --- Portfolio Filter (scoped per block) ---
+    document.querySelectorAll('.portfolio__filter[data-portfolio-filter]').forEach(filterGroup => {
+        const block = filterGroup.closest('.portfolio__block');
+        const chips = filterGroup.querySelectorAll('.chip[data-filter]');
+        const categories = block.querySelectorAll('.portfolio__category[data-cat]');
 
-    filterButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const filter = btn.getAttribute('data-filter');
+        chips.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.getAttribute('data-filter');
+                chips.forEach(b => b.classList.remove('chip--active'));
+                btn.classList.add('chip--active');
 
-            filterButtons.forEach(b => b.classList.remove('chip--active'));
-            btn.classList.add('chip--active');
-
-            portfolioProjects.forEach(project => {
-                if (filter === 'all' || project.getAttribute('data-project') === filter) {
-                    project.classList.remove('hidden');
-                } else {
-                    project.classList.add('hidden');
-                }
+                categories.forEach(cat => {
+                    if (filter === 'all' || cat.getAttribute('data-cat') === filter) {
+                        cat.classList.remove('hidden');
+                    } else {
+                        cat.classList.add('hidden');
+                    }
+                });
             });
-
-            // Hide project titles when a specific filter is active (redundant when only one group visible)
-            if (filter === 'all') {
-                portfolioSection.classList.remove('portfolio--filtered');
-            } else {
-                portfolioSection.classList.add('portfolio--filtered');
-            }
         });
     });
 

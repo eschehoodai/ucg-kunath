@@ -1,8 +1,8 @@
 # Workpaper – Landing Page „Annie Kunth | UGC Creator"
 
 **Erstellt:** 15. April 2026  
-**Zuletzt aktualisiert:** 24. April 2026  
-**Status:** v1.6 – SEO-Optimierung & rechtliche Seiten ergänzt  
+**Zuletzt aktualisiert:** 26. April 2026  
+**Status:** v2.3 – Hero-Redesign, lokale Fonts, Navigation & Design-System überarbeitet  
 
 ---
 
@@ -43,6 +43,19 @@ Alle Mediendateien wurden von kryptischen Instagram-IDs in kurze, projektbezogen
 | `VideoKleidung1.mp4` | `fashion-video-1.mp4` | Root |
 | `VideoKleidung2.mp4` | `fashion-video-2.mp4` | Root |
 | `VideoTrinkflasche1.mp4` | `drinks-video-1.mp4` | Root |
+| *(neu)* | `titelseite.jpg` | Root – Hero-Hintergrundbild (1920×880 px) |
+
+### Font-Ordner (`fonts/`)
+
+| Datei | Verwendung |
+| :--- | :--- |
+| `Cabin-VariableFont_wdth,wght.ttf` | Globaler Body- & Display-Font |
+| `Cabin-Italic-VariableFont_wdth,wght.ttf` | Cabin Italic |
+| `BrittanySignature.ttf` | Hero-Headline „Annie Kunath" |
+| `CormorantGaramond-VariableFont_wght.ttf` | Nav-Logo Name |
+| `CormorantGaramond-Italic-VariableFont_wght.ttf` | Cormorant Italic |
+| `Montserrat-VariableFont_wght.ttf` | Nav-Links, Hero-Subtitle |
+| `Montserrat-Italic-VariableFont_wght.ttf` | Montserrat Italic |
 
 ### Medienverwendung auf der Website
 
@@ -64,14 +77,19 @@ Alle Mediendateien wurden von kryptischen Instagram-IDs in kurze, projektbezogen
 - Glassmorphism-Effekt (70% Opacity + Backdrop-Blur)
 - Sticky-Header mit Scroll-Effekt (kompaktere Padding bei Scroll)
 - Mobile Hamburger-Menü mit animiertem Toggle
+- **Logo links:** zweizeilig – „Annie Kunath" (Cormorant Garamond, 1.5rem, weight 600) + „UGC Creatorin" (Montserrat, 0.6rem, uppercase, weiter Abstand)
+- **Menüpunkte:** ABOUT ME · PORTFOLIO · SERVICES · CONTACT – Font Montserrat, uppercase, letter-spacing 0.12em
+- **CONTACT-Button:** eckiger Rahmen (kein border-radius), transparenter Hintergrund, Hover füllt sich mit Textfarbe
 
 ### 3.2 Hero
-- Vollflächiger Video-Hintergrund (Viewport-Höhe) mit 4 MP4s nebeneinander (je 25 % Breite)
-- Verwendete Videos: `fashion-video-1.mp4`, `drinks-video-1.mp4`, `fashion-video-2.mp4`, `header-video-4.mp4`
-- Dunkles Overlay für Lesbarkeit, zentrierter weißer Text darüber
-- Alle Hero-Videos: stummgeschaltet, geloopt, Wiedergabegeschwindigkeit 0.65×
-- Responsive: 2×2-Grid auf ≤ 768 px
-- Zwei CTAs: „Projekt anfragen" (primär) + „Portfolio ansehen" (Ghost)
+- Vollflächiges Hintergrundbild (`titelseite.jpg`, 1920×880 px) ersetzt die 4 MP4-Videos
+- `object-fit: cover`, `object-position: center` – füllt den gesamten Hero lückenlos aus
+- Dunkles Overlay für Lesbarkeit
+- **Headline:** „Annie Kunath" – Font Brittany Signature, riesig (`clamp(4rem, 11vw, 12rem)`), weiß, `white-space: nowrap`
+- **Untertitel:** „UGC Creatorin" – Montserrat, uppercase, weiter Buchstabenabstand, eingerückt unter dem zweiten Buchstaben „n" via `padding-left: clamp(1.8rem, 4.8vw, 5.2rem)`
+- **Layout:** Titel + Subtitle in `hero__text-group` (vertikal, linksbündig), Buttons am unteren Rand weit auseinander (`justify-content: space-between`)
+- **Buttons:** beide transparent mit dünnem eckigen Rahmen (`border-radius: 0`), Hover füllt dezent weiß
+- Hero-Höhe: `calc(100vh - 72px)`, `margin-top: 72px` (exakt unter der fixen Navigation)
 
 ### 3.3 Über mich
 - Dunkler Hintergrund (surface-container-low) für Kontrast
@@ -136,13 +154,14 @@ Alle Mediendateien wurden von kryptischen Instagram-IDs in kurze, projektbezogen
 | Design-Vorgabe | Umsetzung |
 | :--- | :--- |
 | **No-Line Rule** | Keine 1px-Borders für Sektionen; Trennung durch Background-Shifts |
-| **Glassmorphism** | Navigation + Floating Cards: 70% Opacity + blur(20px) |
+| **Glassmorphism** | Navigation: 70% Opacity + blur(20px) |
 | **Tonal Layering** | Elevation durch Hintergrundfarben statt Schatten |
-| **Typografie** | Manrope (Display/Headlines) + Inter (Body/Labels) |
+| **Typografie** | Cabin (global) · Brittany Signature (Hero-Titel) · Cormorant Garamond (Nav-Logo) · Montserrat (Nav-Links, Hero-Subtitle) |
+| **Lokale Fonts** | Alle Fonts aus `fonts/`-Ordner via `@font-face`, kein Google Fonts mehr |
 | **Farbpalette** | Surface #807475, Primary #a6646f, Muted Earthy Tones |
 | **Intentional Asymmetry** | Staggered Portfolio-Grid, asymmetrische Layouts |
 | **Ghost Borders** | outline-variant @ 20% Opacity für Input-Felder |
-| **No Drop Shadows** | Keine Standard-Schatten; nur subtile Box-Shadows auf Primary-CTAs |
+| **Eckige Buttons** | Hero-CTAs und CONTACT-Button ohne border-radius |
 | **Kein reines Schwarz** | Text in #2c2325 (on-surface) statt #000000 |
 
 ---
@@ -174,9 +193,10 @@ Alle Mediendateien wurden von kryptischen Instagram-IDs in kurze, projektbezogen
 - **Counter-Animation:** Animierte Zähler mit Ease-Out-Kurve
 - **Portfolio-Filter:** Chip-basierte Projekt-Filterung (Alle / Drinks / Fashion / Padel / Accessoires)
 - **Video Play/Pause:** Click-to-Play für Portfolio-Videos; nur ein Video gleichzeitig aktiv
-- **Hero-Wiedergabegeschwindigkeit:** 0.65× für alle Hero-Hintergrundvideos
 - **Kontaktformular:** Client-seitige Validierung + Erfolgsfeedback
 - **Smooth Scrolling:** Sanftes Scrollen zu Ankerpunkten
+
+> Hero-Video-Playback-Script entfernt (kein Video im Hero mehr)
 
 ---
 
@@ -202,6 +222,10 @@ Alle Mediendateien wurden von kryptischen Instagram-IDs in kurze, projektbezogen
 | **v1.4** | 15.04.2026 | Prozess-Section: SVG-Icons statt Zahlen, kompaktes Padding, Trennlinie entfernt |
 | **v1.5** | 15.04.2026 | `bag-video.mp4` → `padel/padel-video.mp4` korrekt zugeordnet; Bag-Section ohne Video |
 | **v1.6** | 24.04.2026 | SEO-Optimierung: erweiterter `<head>` (OG, Twitter Card, JSON-LD, Canonical), Alt-Texte verbessert, Footer-Links; `impressum.html`, `datenschutz.html`, `robots.txt`, `sitemap.xml` erstellt |
+| **v2.0** | 25.04.2026 | Hero-Hintergrund: 4 Videos → `titelseite.jpg`; Video-Playback-Script entfernt; `object-fit: cover` |
+| **v2.1** | 25.04.2026 | Lokale Fonts eingebunden (`fonts/`-Ordner): Cabin (global), Brittany Signature, Cormorant Garamond, Montserrat – Google Fonts vollständig entfernt |
+| **v2.2** | 25.04.2026 | Navigation redesigned: Logo zweizeilig (Cormorant + Montserrat), Menüpunkte auf EN (ABOUT ME / PORTFOLIO / SERVICES / CONTACT), Montserrat-Font für Links, CONTACT mit eckigem Rahmen |
+| **v2.3** | 26.04.2026 | Hero-Text komplett neu: Brittany Signature für „Annie Kunath" (riesig, nowrap), Montserrat für „UGC Creatorin" (eingerückt unter „n"), beide Buttons transparent mit eckigem Rahmen, Subtitle-Einrückung via `clamp()` |
 
 ---
 
@@ -212,7 +236,7 @@ Alle Mediendateien wurden von kryptischen Instagram-IDs in kurze, projektbezogen
 - [ ] **Datenschutz ausfüllen:** `datenschutz.html` – Hosting-Anbieter, Formular-Dienst, Analytics-Tool, Datum eintragen
 - [ ] **Favicon erstellen:** `favicon.png` (32×32 px) und `apple-touch-icon.png` (180×180 px) anlegen
 - [ ] **OG-Bild optimieren:** `annie-hero.jpg` in 1200×630 px Crop für Social Sharing
-- [ ] **Google Fonts lokal hosten:** Für bessere DSGVO-Konformität und LCP-Performance
+- [x] **Google Fonts lokal hosten:** Erledigt – alle Fonts aus `fonts/`-Ordner via `@font-face`
 - [ ] **Portfolio-Inhalte:** Weitere Projekte und Videos hinzufügen, sobald verfügbar
 - [ ] **Video-Thumbnails:** Custom Poster-Frames für Videos erstellen (derzeit erstes Frame aus Metadaten)
 - [ ] **Backend-Integration:** Kontaktformular an E-Mail-Service anbinden (z. B. Formspree, Netlify Forms)
