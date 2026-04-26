@@ -265,6 +265,7 @@ ul {
     text-transform: uppercase;
     letter-spacing: 0.18em;
     color: var(--on-surface-variant);
+    margin-left: 0.5rem;
 }
 
 .nav__links {
@@ -408,7 +409,8 @@ ul {
 /* --- Navigation --- */
 .about {
     position: relative;
-    padding: var(--space-3xl) var(--space-lg);
+    padding: var(--space-xl) var(--space-lg);
+    background-color: #e6e2df;
     background-image: url('bgaboutme.png');
     background-size: 100% 100%;
     background-position: center;
@@ -461,14 +463,21 @@ ul {
     font-size: 1.125rem;
     color: #1a1a1a;
     line-height: 1.9;
+    margin-top: var(--space-xl);
     margin-bottom: var(--space-xl);
+    padding-left: var(--space-md);
+    border-left: 3px solid var(--primary);
+    font-family: 'CormorantGaramond', serif;
+    font-size: 1.25rem;
 }
 
 /* --- Portfolio Section --- */
 .portfolio {
-    padding: var(--space-3xl) var(--space-lg);
-    max-width: 1200px;
-    margin: 0 auto;
+    background-color: #e6e2df;
+    background-image: url('bgaboutme.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: var(--space-xl) var(--space-lg);
 }
 
 .portfolio__header {
@@ -710,7 +719,7 @@ ul {
 
 .mediakit__title {
     font-family: 'BrittanySignature', cursive;
-    font-size: clamp(3rem, 7vw, 6rem);
+    font-size: clamp(2rem, 4.5vw, 4rem);
     font-weight: 400;
     color: #fff;
     line-height: 1;
@@ -756,8 +765,11 @@ ul {
 
 /* --- Services Section --- */
 .services {
-    background-color: var(--surface-container-lowest);
-    padding: var(--space-3xl) var(--space-lg);
+    background-color: #e6e2df;
+    background-image: url('bgaboutme.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: var(--space-xl) var(--space-lg);
 }
 
 .services__container {
@@ -808,6 +820,10 @@ ul {
 }
 
 .service-card--featured {
+    background: var(--primary-container);
+}
+
+.service-card:not(.service-card--featured) {
     background: var(--primary-container);
 }
 
@@ -878,6 +894,15 @@ ul {
     font-weight: 600;
 }
 
+.services__footnote {
+    text-align: center;
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    color: var(--on-surface-variant);
+    margin-top: var(--space-lg);
+    opacity: 0.75;
+}
+
 .services__cta {
     text-align: center;
     margin-top: var(--space-xl);
@@ -906,22 +931,96 @@ ul {
 }
 
 
+/* --- Work With Me Section --- */
+.workwithme {
+    background-color: #e6e2df;
+    background-image: url('bgaboutme.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: var(--space-xl) var(--space-lg);
+}
+
+.workwithme__container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.workwithme__header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+.workwithme__header .section-title em {
+    font-family: 'BrittanySignature', cursive;
+    font-style: normal;
+    font-size: 1.4em;
+    font-weight: 400;
+    vertical-align: middle;
+}
+
+.workwithme__text {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    color: var(--on-surface-variant);
+    line-height: 1.9;
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto var(--space-3xl);
+}
+
+.workwithme__logos-track {
+    overflow: hidden;
+    width: 100%;
+    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+.workwithme__logos-inner {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3xl);
+    width: max-content;
+    animation: marquee 30s linear infinite;
+}
+
+.workwithme__logos-inner img {
+    height: 300px;
+    width: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+@media (max-width: 600px) {
+    .workwithme__logos-inner img {
+        height: 200px;
+    }
+    .workwithme__logos-inner {
+        gap: var(--space-2xl);
+    }
+}
+
 /* --- Process Section --- */
 .process {
-    background: linear-gradient(135deg, #2c2325 0%, #4a2d37 35%, #5a3845 65%, #332028 100%);
-    padding: 1.2rem var(--space-lg);
     position: relative;
+    padding: 1.2rem var(--space-lg);
     overflow: hidden;
+    isolation: isolate;
 }
 
 .process::before {
     content: '';
     position: absolute;
-    inset: 0;
-    background:
-        radial-gradient(ellipse at 15% 60%, rgba(166, 100, 111, 0.18) 0%, transparent 55%),
-        radial-gradient(ellipse at 85% 20%, rgba(122, 94, 128, 0.14) 0%, transparent 50%);
-    pointer-events: none;
+    inset: -20px;
+    background-image: url('howwork.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(6px) brightness(0.45);
+    z-index: -1;
 }
 
 .process__container {
@@ -935,12 +1034,20 @@ ul {
 }
 
 .process .section-label {
-    color: var(--primary-fixed-dim);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .process .section-title,
 .process__header .section-title {
-    color: var(--surface-container-lowest);
+    color: #ffffff;
+}
+
+.process__header .section-title em {
+    font-family: 'BrittanySignature', cursive;
+    font-style: normal;
+    font-size: 1.4em;
+    font-weight: 400;
+    vertical-align: middle;
 }
 
 .process__steps {
@@ -985,13 +1092,13 @@ ul {
     font-family: var(--font-display);
     font-size: 1.125rem;
     font-weight: 600;
-    color: var(--surface-container-lowest);
+    color: #ffffff;
     margin-bottom: var(--space-xs);
 }
 
 .process__step-text {
     font-size: 0.875rem;
-    color: rgba(245, 240, 241, 0.65);
+    color: rgba(255, 255, 255, 0.85);
     line-height: 1.7;
 }
 
@@ -1002,31 +1109,27 @@ ul {
 
 /* Step color variants */
 .process__step--1 .process__step-inner {
-    background: rgba(166, 100, 111, 0.18);
     border-radius: 1rem;
     padding: var(--space-md);
-    border-left: 3px solid rgba(166, 100, 111, 0.7);
+    border-left: 3px solid rgba(255, 255, 255, 0.5);
 }
 
 .process__step--2 .process__step-inner {
-    background: rgba(122, 94, 128, 0.18);
     border-radius: 1rem;
     padding: var(--space-md);
-    border-left: 3px solid rgba(122, 94, 128, 0.7);
+    border-left: 3px solid rgba(255, 255, 255, 0.5);
 }
 
 .process__step--3 .process__step-inner {
-    background: rgba(138, 114, 104, 0.18);
     border-radius: 1rem;
     padding: var(--space-md);
-    border-left: 3px solid rgba(138, 114, 104, 0.7);
+    border-left: 3px solid rgba(255, 255, 255, 0.5);
 }
 
 .process__step--4 .process__step-inner {
-    background: rgba(166, 100, 111, 0.10);
     border-radius: 1rem;
     padding: var(--space-md);
-    border-left: 3px solid rgba(212, 163, 171, 0.7);
+    border-left: 3px solid rgba(255, 255, 255, 0.5);
 }
 
 
@@ -1035,12 +1138,16 @@ ul {
 
 /* --- Contact Section --- */
 .contact {
-    padding: var(--space-3xl) var(--space-lg);
-    max-width: 1100px;
-    margin: 0 auto;
+    background-color: #e6e2df;
+    background-image: url('bgaboutme.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: var(--space-xl) var(--space-lg);
 }
 
 .contact__container {
+    max-width: 1100px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1.2fr;
     gap: var(--space-xl);
@@ -1075,6 +1182,13 @@ ul {
 
 .contact__link-icon {
     font-size: 1.125rem;
+}
+
+.contact__link-logo {
+    height: 1.125rem;
+    width: auto;
+    vertical-align: middle;
+    display: inline-block;
 }
 
 .contact__form {
@@ -1270,6 +1384,10 @@ ul {
     }
 
     /* Nav mobile */
+    .nav__logo-name {
+        font-size: 1.9rem;
+    }
+
     .nav__toggle {
         display: flex;
     }
