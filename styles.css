@@ -502,21 +502,24 @@ ul {
 
 .chip {
     padding: 0.5rem 1.25rem;
-    font-family: var(--font-body);
+    font-family: 'Montserrat', sans-serif;
     font-size: 0.8125rem;
     font-weight: 500;
-    background: var(--surface-container-high);
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     color: var(--on-surface);
-    border: none;
-    border-radius: var(--radius-full);
+    border: 1px solid rgba(210, 195, 170, 0.5);
+    border-radius: 0;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .chip:hover,
 .chip--active {
-    background: var(--primary);
-    color: var(--on-primary);
+    background: #e8dfc8;
+    color: #3a2e20;
+    border-color: #c9b99a;
 }
 
 /* Portfolio blocks */
