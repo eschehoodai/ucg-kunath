@@ -5,6 +5,37 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // --- Portfolio Strip: equal height = smallest image ---
+    const stripImgs = document.querySelectorAll('.portfolio__strip img');
+    if (stripImgs.length) {
+        const setStripHeight = () => {
+            // reset first so natural sizes are recalculated
+            stripImgs.forEach(img => img.style.height = 'auto');
+            let minH = Infinity;
+            stripImgs.forEach(img => {
+                const rendered = img.naturalHeight * (img.clientWidth / img.naturalWidth);
+                if (rendered > 0 && rendered < minH) minH = rendered;
+            });
+            if (minH < Infinity) {
+                stripImgs.forEach(img => img.style.height = minH + 'px');
+            }
+        };
+        // run after all images have loaded
+        let loaded = 0;
+        stripImgs.forEach(img => {
+            if (img.complete) {
+                loaded++;
+                if (loaded === stripImgs.length) setStripHeight();
+            } else {
+                img.addEventListener('load', () => {
+                    loaded++;
+                    if (loaded === stripImgs.length) setStripHeight();
+                });
+            }
+        });
+        window.addEventListener('resize', setStripHeight);
+    }
+
     // --- Mobile Navigation ---
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
