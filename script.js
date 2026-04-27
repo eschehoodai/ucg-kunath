@@ -177,12 +177,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!video) return;
 
         item.addEventListener('click', () => {
-            // Lazy-load: set src from data-src on first click
-            if (video.dataset.src && !video.getAttribute('src')) {
-                video.src = video.dataset.src;
-                video.load();
-            }
-
             if (video.paused) {
                 // Pause all other videos first
                 document.querySelectorAll('.portfolio__item--video video').forEach(v => {
