@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datenschutzerklärung | Annie Kunth</title>
+    <title>Datenschutzerklärung | Annie Kunath</title>
     <meta name="robots" content="noindex, nofollow">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
         .legal-page {
@@ -17,43 +14,48 @@
             margin: 0 auto;
         }
         .legal-page h1 {
-            font-family: 'Manrope', sans-serif;
-            font-size: 2rem;
+            font-family: 'CormorantGaramond', serif;
+            font-size: 2.5rem;
+            font-weight: 400;
+            font-style: italic;
             margin-bottom: 2rem;
-            color: var(--color-on-surface, #2c2325);
+            color: var(--on-surface, #2c2325);
         }
         .legal-page h2 {
-            font-family: 'Manrope', sans-serif;
-            font-size: 1.1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
             margin-top: 2rem;
             margin-bottom: 0.5rem;
-            color: var(--color-on-surface, #2c2325);
+            color: var(--on-surface, #2c2325);
         }
         .legal-page p, .legal-page address {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Cabin', sans-serif;
             font-size: 0.95rem;
             line-height: 1.7;
-            color: var(--color-on-surface-variant, #5a4a4d);
+            color: var(--on-surface-variant, #5a4a4d);
             font-style: normal;
             margin-bottom: 0.75rem;
         }
         .legal-page a {
-            color: var(--color-primary, #a6646f);
+            color: #9a9091;
         }
         .legal-page ul {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Cabin', sans-serif;
             font-size: 0.95rem;
             line-height: 1.7;
-            color: var(--color-on-surface-variant, #5a4a4d);
+            color: var(--on-surface-variant, #5a4a4d);
             padding-left: 1.5rem;
             margin-bottom: 0.75rem;
         }
         .legal-page .placeholder {
             background: #f5e9eb;
-            border: 1px dashed #a6646f;
+            border: 1px dashed #9a9091;
             border-radius: 6px;
             padding: 8px 14px;
-            color: #a6646f;
+            color: #9a9091;
             font-size: 0.85rem;
             display: inline-block;
             margin: 4px 0;
@@ -62,9 +64,11 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            font-family: 'Inter', sans-serif;
-            font-size: 0.9rem;
-            color: var(--color-primary, #a6646f);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            color: #9a9091;
             text-decoration: none;
             margin-bottom: 2.5rem;
         }
@@ -75,12 +79,23 @@
 
     <!-- Navigation -->
     <nav class="nav" id="nav">
-        <a class="nav__logo" href="index.html">Annie Kunth</a>
-        <ul class="nav__links">
-            <li><a href="index.html#about">Über mich</a></li>
-            <li><a href="index.html#portfolio">Portfolio</a></li>
-            <li><a href="index.html#services">Services</a></li>
-            <li><a href="index.html#contact" class="nav__cta">Buche mich</a></li>
+        <a href="index.html" style="text-decoration:none;">
+            <div class="nav__logo">
+                <span class="nav__logo-name">Annie Kunath</span>
+                <span class="nav__logo-sub">UGC Creatorin</span>
+            </div>
+        </a>
+        <button class="nav__toggle" id="navToggle" aria-label="Menü öffnen">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav__links" id="navLinks">
+            <li><a href="index.html#about">ABOUT ME</a></li>
+            <li><a href="index.html#portfolio">PORTFOLIO</a></li>
+            <li><a href="index.html#services">SERVICES</a></li>
+            <li><a href="index.html#workwithme">WORK WITH ME</a></li>
+            <li><a href="index.html#contact" class="nav__cta">CONTACT ME</a></li>
         </ul>
     </nav>
 
@@ -175,22 +190,27 @@
     <footer class="footer">
         <div class="footer__container">
             <div class="footer__brand">
-                <span class="footer__logo">Annie Kunth</span>
-                <p class="footer__tagline">UGC Creatorin für authentischen Content</p>
+                <span class="footer__logo">Annie Kunath</span>
             </div>
             <div class="footer__links">
-                <a href="index.html">Start</a>
+                <a href="index.html#hero">Start</a>
+                <a href="index.html#about">Über mich</a>
                 <a href="index.html#portfolio">Portfolio</a>
+                <a href="index.html#services">Services</a>
                 <a href="index.html#contact">Kontakt</a>
-                <a href="impressum.html">Impressum</a>
-                <a href="datenschutz.html">Datenschutz</a>
             </div>
-            <p class="footer__copy">&copy; 2026 Annie Kunth. Alle Rechte vorbehalten. &nbsp;·&nbsp;
+            <div class="footer__social">
+                <a href="https://instagram.com/anniie_kunth" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+                <a href="https://tiktok.com/@anniie_kunth" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TikTok</a>
+                <a href="mailto:akunath.ugc@gmail.com" aria-label="E-Mail">E-Mail</a>
+            </div>
+            <p class="footer__copy">&copy; 2026 Annie Kunath. Alle Rechte vorbehalten. &nbsp;·&nbsp;
                 <a href="impressum.html">Impressum</a> &nbsp;·&nbsp;
                 <a href="datenschutz.html">Datenschutz</a>
             </p>
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>

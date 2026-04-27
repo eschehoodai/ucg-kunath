@@ -53,6 +53,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 navLinks.classList.remove('open');
             });
         });
+
+        // Close nav on click outside
+        document.addEventListener('click', (e) => {
+            if (navLinks.classList.contains('open') &&
+                !navLinks.contains(e.target) &&
+                !navToggle.contains(e.target)) {
+                navToggle.classList.remove('active');
+                navLinks.classList.remove('open');
+            }
+        });
     }
 
     // --- Sticky Nav Scroll Effect ---
@@ -88,6 +98,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     fadeElements.forEach(el => observer.observe(el));
+
+    // --- Section Reveal (per-section direction) ---
+    const revealSections = document.querySelectorAll('[data-reveal]');
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                sectionObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.08,
+        rootMargin: '0px 0px -60px 0px'
+    });
+    revealSections.forEach(s => sectionObserver.observe(s));
 
     // --- Counter Animation ---
     const counters = document.querySelectorAll('[data-count]');
