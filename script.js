@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Scroll Animations (Intersection Observer) ---
     const fadeElements = document.querySelectorAll(
-        '.about__content, .portfolio__header, .portfolio__category, ' +
+        '.about__content, .portfolio__header, ' +
         '.service-card, .services__header, .process__step, .contact__info, .contact__form'
     );
 
