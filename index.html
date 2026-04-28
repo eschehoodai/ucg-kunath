@@ -99,7 +99,7 @@
                 <p class="hero__subtitle">UGC Creatorin</p>
             </div>
             <div class="hero__actions">
-                <a href="#contact" class="btn btn--primary">Projekt anfragen</a>
+                <a href="#contact" class="btn btn--ghost btn--ghost-light">Projekt anfragen</a>
                 <a href="#portfolio" class="btn btn--ghost btn--ghost-light">Portfolio ansehen</a>
             </div>
         </div>
@@ -109,6 +109,7 @@
     <section class="about" id="about" data-reveal="from-left">
         <div class="about__container">
             <div class="about__image-col">
+                <span class="section-label">About Me</span>
                 <img src="aboutme.jpg" alt="Annie Kunath – UGC Creatorin" class="about__portrait" loading="lazy">
             </div>
             <div class="about__content">
@@ -130,8 +131,8 @@
         <div class="portfolio__block">
             <div class="portfolio__header">
                 <span class="section-label">Portfolio</span>
-                <h2 class="section-title">Portfolio #1 Videos</h2>
-                <p class="portfolio__desc">Authentischer Video-Content für Social Media – Reels, TikToks &amp; Ads.</p>
+                <h2 class="section-title">Ausgewählte Video-Projekte</h2>
+                <p class="portfolio__desc">Hochwertiger Video-Content für Social Media und Kampagnen</p>
             </div>
             <div class="portfolio__filter" role="group" aria-label="Video-Kategorien filtern" data-portfolio-filter="videos">
                 <button class="chip chip--active" data-filter="all">Alle</button>
@@ -267,6 +268,11 @@
                         <div class="portfolio__play-icon" aria-hidden="true">▶</div>
                         <div class="portfolio__overlay"><span>Koryo</span></div>
                     </div>
+                    <div class="portfolio__item portfolio__item--video">
+                        <video src="drinks-video-1.mp4" loop playsinline aria-label="Drinks Video 1"></video>
+                        <div class="portfolio__play-icon" aria-hidden="true">▶</div>
+                        <div class="portfolio__overlay"><span>Drinks</span></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -274,8 +280,8 @@
         <!-- ── Portfolio #2: Bilder ── -->
         <div class="portfolio__block portfolio__block--images">
             <div class="portfolio__header">
-                <h2 class="section-title">Portfolio #2 Bilder</h2>
-                <p class="portfolio__desc">Hochwertiger Foto-Content für eCommerce, Social Media &amp; Kampagnen.</p>
+                <h2 class="section-title">Ausgewählte Foto-Projekte</h2>
+                <p class="portfolio__desc">Professionelle Produktbilder für Social Media, Ads und eCommerce.</p>
             </div>
             <div class="portfolio__filter" role="group" aria-label="Bilder-Kategorien filtern" data-portfolio-filter="bilder">
                 <button class="chip chip--active" data-filter="all">Alle</button>
@@ -325,11 +331,14 @@
     </section>
 
     <!-- Portfolio Image Strip -->
-    <div class="portfolio__strip">
-        <img src="s1.jpg" alt="Portfolio Bild 1" loading="lazy">
-        <img src="s2.jpg" alt="Portfolio Bild 2" loading="lazy">
-        <img src="s3.jpg" alt="Portfolio Bild 3" loading="lazy">
-        <img src="s4.jpg" alt="Portfolio Bild 4" loading="lazy">
+    <div class="portfolio__strip-wrapper">
+        <h2 class="portfolio__strip-title">SHOOTS</h2>
+        <div class="portfolio__strip">
+            <img src="s1.jpg" alt="Portfolio Bild 1" loading="lazy">
+            <img src="s2.jpg" alt="Portfolio Bild 2" loading="lazy">
+            <img src="s3.jpg" alt="Portfolio Bild 3" loading="lazy">
+            <img src="s4.jpg" alt="Portfolio Bild 4" loading="lazy">
+        </div>
     </div>
 
     <!-- Media-KIT Section -->
@@ -349,9 +358,11 @@
             <div class="services__header">
                 <span class="section-label">Services</span>
                 <h2 class="section-title">Authentischer Content, der verkauft –<br>das erstelle ich für dich</h2>
+                <p class="services__subtitle">Authentischer Content, der Vertrauen schafft und Conversions steigert.</p>
             </div>
             <div class="services__grid">
                 <div class="service-card">
+                    <span class="service-card__badge">Beliebt</span>
                     <div class="service-card__image">
                         <img src="services/Bild_ Ugccontent.jpg" alt="UGC Video Content" loading="lazy">
                     </div>
@@ -370,9 +381,8 @@
                     <a href="#contact" class="btn btn--primary btn--card">Jetzt UGC Video anfragen</a>
                 </div>
                 <div class="service-card service-card--featured">
-                    <span class="service-card__badge">Beliebt</span>
                     <div class="service-card__image">
-                        <img src="services/Bild_Produktbilder.jpg" alt="Produktbilder" loading="lazy">
+                        <img src="services/Bild_Produktbilder.jpg" alt="Produktbilder" loading="lazy" style="object-position: center 35%;">
                     </div>
                     <h3 class="service-card__title">Produktbilder<sup>*</sup></h3>
                     <p class="service-card__text">Hochwertige, ästhetische Produktbilder für Social Media, Website, Ads und Kampagnen. Clean, detailverliebt und perfekt auf deine Brand abgestimmt – für einen professionellen und starken visuellen Auftritt.</p>
@@ -417,7 +427,7 @@
     <section class="workwithme" id="workwithme" data-reveal="from-top">
         <div class="workwithme__container">
             <div class="workwithme__header">
-                <h2 class="section-title">Work <em>WITH ME</em></h2>
+                <h2 class="section-title workwithme__title">Work With Me</h2>
             </div>
             <p class="workwithme__text">Ob authentische Anwendungsvideos, Detailaufnahmen oder Voiceover Formate.<br>
             Bei meinem Videocontent sind keine Grenzen gesetzt. Wir können gern im Voraus gemeinsam besprechen welche Videoformate du für deine Brand am liebsten haben möchtest.</p>
@@ -583,7 +593,7 @@
                 <a href="https://tiktok.com/@anniie_kunth" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TikTok</a>
                 <a href="mailto:akunath.ugc@gmail.com" aria-label="E-Mail">E-Mail</a>
             </div>
-            <p class="footer__copy">&copy; 2026 Annie Kunth. Alle Rechte vorbehalten. &nbsp;·&nbsp;
+            <p class="footer__copy">&copy; 2026 Annie Kunath. &nbsp;&middot;&nbsp;
                 <a href="impressum.html">Impressum</a> &nbsp;·&nbsp;
                 <a href="datenschutz.html">Datenschutz</a>
             </p>

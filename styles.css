@@ -436,10 +436,17 @@ ul {
 
 .about__image-col {
     border-radius: 9999px 9999px 0 0;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.about__image-col .section-label {
+    margin-bottom: var(--space-sm);
 }
 
 .about__portrait {
+    border-radius: 9999px 9999px 0 0;
+    overflow: hidden;
     width: 100%;
     display: block;
     object-fit: cover;
@@ -691,15 +698,32 @@ ul {
 }
 
 /* --- Portfolio Image Strip --- */
+.portfolio__strip-wrapper {
+    background-color: #e6e2df;
+    background-image: url('bgaboutme.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding-top: var(--space-xl);
+}
+
+.portfolio__strip-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--on-surface-variant);
+    text-align: center;
+    margin: 0 0 var(--space-md) 0;
+    padding: 0 10%;
+}
+
 .portfolio__strip {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 18px;
     width: 100%;
-    background-color: #e6e2df;
-    background-image: url('bgaboutme.png');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+    background-color: transparent;
     padding: 0 10% var(--space-xl);
 }
 
@@ -819,6 +843,13 @@ ul {
     margin-bottom: var(--space-xl);
 }
 
+.services__subtitle {
+    font-size: 1rem;
+    color: var(--on-surface-variant);
+    margin-top: var(--space-xs);
+    margin-bottom: 0;
+}
+
 .services__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -833,6 +864,8 @@ ul {
     border-radius: var(--radius-md);
     transition: transform 0.3s ease;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .service-card:hover {
@@ -920,10 +953,12 @@ ul {
 }
 
 .btn--card {
-    margin-top: var(--space-md);
+    margin-top: auto;
+    padding-top: var(--space-md);
     width: 100%;
     font-size: 0.8125rem;
     padding: 0.75rem 1.5rem;
+    margin-top: auto;
 }
 
 .btn--lg {
@@ -994,6 +1029,13 @@ ul {
     font-size: 1.4em;
     font-weight: 400;
     vertical-align: middle;
+}
+
+.workwithme__title {
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
 }
 
 .workwithme__text {
